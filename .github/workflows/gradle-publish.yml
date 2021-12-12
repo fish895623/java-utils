@@ -27,11 +27,11 @@ jobs:
           settings-path: ${{ github.workspace }} # location for the settings.xml file
 
       - name: Build with Gradle
-        uses: gradle/gradle-build-action@v2
-        with:
-          arguments: build
+        run: |
+          chmod +x gradlew
+          ./gradlew build
+        
           
       - name: Publish with Gradle
-        uses: gradle/gradle-build-action@v2
-        with:
-          arguments: publish -P gpr.user=${{ github.actor }} -P gpr.key=${{ secrets.GITHUB_TOKEN }}
+        run: |
+          ./gradlew publish -P gpr.user=${{ github.actor }} -P gpr.key=${{ secrets.GITHUB_TOKEN }}
