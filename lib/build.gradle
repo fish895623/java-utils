@@ -27,6 +27,7 @@ publishing {
             credentials {
                 username = project.findProperty("gpr.user") ?: System.getenv("GITHUB_USERNAME")
                 password = project.findProperty("gpr.key")  ?: System.getenv("GITHUB_TOKEN")
+                version  = project.findProperty("gpr.sha")
             }
         }
     }
@@ -34,7 +35,7 @@ publishing {
         gpr(MavenPublication) {
             groupId = "com.github.fish895623"
             artifactId = "utils"
-            version = "0.0.2"
+            version = version
             from(components.java)
         }
     }

@@ -30,8 +30,7 @@ jobs:
         run: |
           chmod +x gradlew
           ./gradlew build
-        
-          
+
       - name: Publish with Gradle
         run: |
-          ./gradlew publish -P gpr.user=${{ github.actor }} -P gpr.key=${{ secrets.GITHUB_TOKEN }}
+          ./gradlew publish -P gpr.user=${{ github.actor }} -P gpr.key=${{ secrets.GITHUB_TOKEN }} -P gpr.sha=${{ secrets.GITHUB_SHA }}
