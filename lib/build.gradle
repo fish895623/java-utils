@@ -34,7 +34,7 @@ publishing {
         gpr(MavenPublication) {
             groupId = "com.github.fish895623"
             artifactId = "utils"
-            version = "0.0.2"
+            version = project.findProperty("gpr.sha")
             from(components.java)
         }
     }
