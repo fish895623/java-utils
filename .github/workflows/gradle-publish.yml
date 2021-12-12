@@ -33,4 +33,4 @@ jobs:
 
       - name: Publish with Gradle
         run: |
-          ./gradlew publish -P gpr.user=${{ github.actor }} -P gpr.key=${{ secrets.GITHUB_TOKEN }} -P gpr.sha=${{ secrets.GITHUB_SHA }}
+          ./gradlew publish -P gpr.user=${{ github.actor }} -P gpr.key=${{ secrets.GITHUB_TOKEN }} -P gpr.sha=${{ github.GITHUB_SHA }}
