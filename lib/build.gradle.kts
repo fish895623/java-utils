@@ -24,8 +24,10 @@ publishing {
     maven {
       url = uri("https://maven.pkg.github.com/fish895623/java-utils")
       credentials {
-        username = project.findProperty("gpr.user") as String?
-        password = project.findProperty("gpr.key") as String?
+        username = project.findProperty("gpr.user") as String? ?: System
+          .getenv("GITHUB_USER")
+        password = project.findProperty("gpr.key") as String? ?: System
+          .getenv("GITHUB_TOKEN")
       }
     }
   }
