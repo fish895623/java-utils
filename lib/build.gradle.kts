@@ -32,6 +32,7 @@ publishing {
   }
   publications {
     create<MavenPublication>("main") {
+      artifactId = "utils"
       from(components["java"])
     }
   }
