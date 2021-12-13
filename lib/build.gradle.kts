@@ -22,15 +22,16 @@ dependencies {
 publishing {
   repositories {
     maven {
+      name = "Github"
       url = uri("https://maven.pkg.github.com/fish895623/java-utils")
       credentials {
-        username = System.getenv("GITHUB_USER")
+        username = System.getenv("GITHUB_ACTOR")
         password = System.getenv("GITHUB_TOKEN")
       }
     }
   }
   publications {
-    register<MavenPublication>("gpr") {
+    create<MavenPublication>("main") {
       from(components["java"])
     }
   }
