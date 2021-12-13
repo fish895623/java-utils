@@ -8,4 +8,4 @@
  */
 
 rootProject.name = 'utils'
-include('lib')
+include('utils')
