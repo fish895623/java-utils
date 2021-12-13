@@ -4,14 +4,14 @@ plugins {
 }
 
 group = "com.github.fish895623"
-version = "1.0-SNAPSHOT"
+version = "1.0"
 
 repositories {
   mavenCentral()
 }
 
 dependencies {
-  testImplementation("org.junit.jupiter:junit-jupiter:5.7.2")
+  testImplementation("org.junit.jupiter:junit-jupiter:5.8.2")
 
   // Must include
   api("org.apache.commons:commons-math3:3.6.1")
@@ -36,4 +36,9 @@ publishing {
       from(components["java"])
     }
   }
+}
+
+tasks.named<Test>("test") {
+  // Use JUnit Platform for unit tests.
+  useJUnitPlatform()
 }
