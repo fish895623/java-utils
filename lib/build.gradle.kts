@@ -32,7 +32,7 @@ publishing {
     }
   }
   publications {
-    create<MavenPublication>("main") {
+    create<MavenPublication>("gpr") {
       artifactId = "utils"
       from(components["java"])
     }
