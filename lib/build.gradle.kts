@@ -31,7 +31,6 @@ publishing {
   }
   publications {
     register<MavenPublication>("gpr") {
-      artifactId = "utils"
       from(components["java"])
     }
   }
