@@ -11,7 +11,7 @@ class LibraryTest {
   @Test
   void someLibraryMethodReturnsTrue() {
     Library classUnderTest = new Library();
-    assertTrue(classUnderTest.someLibraryMethod(), "should be " +
+    assertTrue(classUnderTest.testingLibraryMethods(), "should be " +
       "true");
   }
 }

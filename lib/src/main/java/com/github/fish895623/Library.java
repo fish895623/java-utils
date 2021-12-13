@@ -4,7 +4,9 @@
 package com.github.fish895623;
 
 public class Library {
-    public boolean someLibraryMethod() {
-        return true;
-    }
+
+  public boolean testingLibraryMethods() {
+    return true;
+  }
+
 }
