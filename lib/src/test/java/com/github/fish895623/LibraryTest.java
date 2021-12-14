@@ -5,13 +5,22 @@ package com.github.fish895623;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class LibraryTest {
   @Test
   void someLibraryMethodReturnsTrue() {
     Library classUnderTest = new Library();
-    assertTrue(classUnderTest.testingLibraryMethods(), "should be " +
-      "true");
+    assertTrue(classUnderTest.testingLibraryMethods(), "should be true");
+  }
+
+  @Test
+  public void getOsType() {
+    Library app = new Library();
+    String osType = app.getOsType();
+
+    assertEquals("google", osType);
+
   }
 }

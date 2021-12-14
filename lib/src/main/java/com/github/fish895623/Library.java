@@ -9,4 +9,10 @@ public class Library {
     return true;
   }
 
+  public String getOsType() {
+
+
+    return "google";
+  }
+
 }
