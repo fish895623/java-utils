@@ -31,6 +31,7 @@ jobs:
 
       - name: Publish with Gradle
         run: |
+          echo ${GITHUB_REF}
           sh -c "chmod +x gradlew"
           if [[ ${GITHUB_REF} == "refs/heads/feature/"* ]]; then
             ./gradlew test
