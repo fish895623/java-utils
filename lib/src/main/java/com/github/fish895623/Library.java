@@ -4,15 +4,12 @@
 package com.github.fish895623;
 
 public class Library {
-
+  /**
+   * asdf
+   * 
+   * @return
+   */
   public boolean testingLibraryMethods() {
     return true;
   }
-
-  public String getOsType() {
-
-
-    return "google";
-  }
-
 }
