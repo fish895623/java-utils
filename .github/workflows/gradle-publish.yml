@@ -30,7 +30,7 @@ jobs:
         uses: gradle/wrapper-validation-action@v1
 
       - name: test with Gradle
-        if: ${{ github.event_name == 'pull_request' && github.event.action == 'push' }}
+        if: ${{ github.event_name == 'pull_request'}}
         run: |
           gradle -q test
         env:
