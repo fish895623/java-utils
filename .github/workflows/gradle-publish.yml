@@ -7,7 +7,7 @@
 
 name: Gradle Package
 
-on: [ push, pull_request ]
+on: [push, pull_request]
 
 jobs:
   build:
@@ -30,6 +30,9 @@ jobs:
         uses: gradle/wrapper-validation-action@v1
 
       - name: Publish with Gradle
-        run: gradle publish
+        run: |
+          echo ${GITHUB_REF}
         env:
+          GITHUB_REF: ${{ github.ref }}
+          GITHUB_ACTOR: ${{ github.actor }}
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
