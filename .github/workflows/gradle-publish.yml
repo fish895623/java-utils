@@ -30,13 +30,12 @@ jobs:
           allow-snapshots: true
 
       - name: test with Gradle
-        run: |
-          echo ${{ github.ref }}
+        run: gradle -q publish
         env:
           GITHUB_ACTOR: ${{ github.actor }}
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
   test:
-    if: ${{ github.event_name == 'pull_request'}}
+    if: ${{ github.event_name == 'pull_request' }}
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -58,9 +57,8 @@ jobs:
           allow-snapshots: true
 
       - name: test with Gradle
-        if: ${{ github.event_name == 'pull_request'}}
-        run: |
-          gradle -q test
+        if: ${{ github.event_name == 'pull_request' }}
+        run: gradle -q test
         env:
           GITHUB_ACTOR: ${{ github.actor }}
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
