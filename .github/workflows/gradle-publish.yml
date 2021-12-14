@@ -31,7 +31,12 @@ jobs:
 
       - name: Publish with Gradle
         run: |
-          echo ${GITHUB_REF}
+          chmod +x gradlew
+          if [[ $ref == "refs/heads/feature/" ]]; then
+            ./gradlew test
+          else
+            ./gradlew publish
+          fi
         env:
           GITHUB_REF: ${{ github.ref }}
           GITHUB_ACTOR: ${{ github.actor }}
