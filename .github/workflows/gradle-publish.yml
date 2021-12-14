@@ -32,7 +32,7 @@ jobs:
       - name: Publish with Gradle
         run: |
           chmod +x gradlew
-          if [[ $ref == "refs/heads/feature/" ]]; then
+          if [[ $GITHUB_REF == "refs/heads/feature/" ]]; then
             ./gradlew test
           else
             ./gradlew publish
