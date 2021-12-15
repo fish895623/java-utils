@@ -8,3 +8,8 @@ bin/
 # IDLE
 .vscode/
 .idea/
+
+# jdtls lsp
+.settings/
+.classpath
+.project
