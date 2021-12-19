@@ -2,7 +2,7 @@
 
 To call from artifactory use code bellow
 
-code are same on groovy and `kotlin`
+code are same on `groovy` and `kotlin-dsl`
 
 ```groovy
 repositories {
